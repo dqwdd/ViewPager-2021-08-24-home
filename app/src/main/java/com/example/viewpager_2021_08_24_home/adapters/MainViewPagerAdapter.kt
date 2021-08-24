@@ -12,15 +12,19 @@ class MainViewPagerAdapter( fm : FragmentManager) : FragmentPagerAdapter(fm) {
 //    제목 부여 함수
     override fun getPageTitle(position: Int): CharSequence? {
 //        CharSequence==String임
-        if (position==0) {
-            return "인사"
+
+//        when (position) {
+//            0 -> return "인사"
+//            1 -> return "이름"
+//            else -> return "출생년도"
+//        }
+
+        return when (position) {
+            0 -> "이름"
+            1 -> "인사"
+            else -> "출생년도"
         }
-        if (position==1) {
-            return "이름"
-        }
-        else {
-            return "출생년도"
-        }
+
     }
 
 
@@ -35,18 +39,27 @@ class MainViewPagerAdapter( fm : FragmentManager) : FragmentPagerAdapter(fm) {
     }
 //TODO주석 있는 상태로 앱 키면 죽으니까 지워줘야 함
     override fun getItem(position: Int): Fragment {
+
+
 //        TODO("Not yet implemented")
 //        각각의 position에 어떤 Fragment가 배치되어야 하는가?
-        if (position==0) {
-            return HelloFragment()
-        }
-    if (position==1) {
-        return NameFragment()
-    }
+//        if (position==0) {
+//            return HelloFragment()
+//        }
+//    if (position==1) {
+//        return NameFragment()
+//    }
+//
+//    else {
+//        return BirthYearFragment()
+//    }
+//    }
+//    여기 근데 if문 말고 when이 정석이래
 
-    else {
-        return BirthYearFragment()
+    return when (position) {
+        0 -> HelloFragment()
+        1 -> NameFragment()
+        else -> BirthYearFragment()
     }
-    }
-
+}
 }
