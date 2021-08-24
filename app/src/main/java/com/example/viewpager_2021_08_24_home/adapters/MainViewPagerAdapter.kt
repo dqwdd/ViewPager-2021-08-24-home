@@ -9,6 +9,7 @@ import com.example.viewpager_2021_08_24_home.fragments.NameFragment
 
 class MainViewPagerAdapter( fm : FragmentManager) : FragmentPagerAdapter(fm) {
 
+//    제목 부여 함수
     override fun getPageTitle(position: Int): CharSequence? {
 //        CharSequence==String임
         if (position==0) {
