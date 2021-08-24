@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.viewpager_2021_08_24_home.R
 
-class HelloFragment : Fragment() {
+class BirthYearFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,7 +15,7 @@ class HelloFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_hello, container, false)
+        return inflater.inflate(R.layout.fragment_birthyear, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
